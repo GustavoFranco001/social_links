@@ -39,6 +39,8 @@ body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   /*color: #ffffff;*/
+  /* add adjust height view port */
+  height: 100vh;
 }
 
 #container {
@@ -181,4 +183,31 @@ footer {
   text-align: center;
   padding: 24px 0;
   font-size: 14px;
+}
+
+/* media queries */
+
+#container {
+  width: 100%;
+  max-width: 960px;
+  height: 712px;
+  margin-top: 64px;
+}
+
+#profile img {
+  width: 128px;
+}
+
+#profile p {
+  font-size: 18px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
