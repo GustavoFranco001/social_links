@@ -9,7 +9,3 @@ Bem-vindo à página de direcionamento, um projeto criado objetivando facilitar 
 - JavaScript
 - Git e Github
 - Figma
-
-## Instalação e Configuração
-
-### **Requisitos**
