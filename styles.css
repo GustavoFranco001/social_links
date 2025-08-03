@@ -128,6 +128,6 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/habit/Dark-mode-desktop.png);
+    --bg-url: url(./assets/habit/Dark-mode-mobile.png);
   }
 }
