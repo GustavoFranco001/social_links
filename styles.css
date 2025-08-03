@@ -6,32 +6,15 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/habit/Dark-mode-mobile.png);
   --stroke-color: rgba(255, 255, 255, 0.5);
+  --stroke-profile-color: rgb(0, 0, 0);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(255, 255, 255, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg);
-}
-
-.light {
-  --text-color: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.05);
-  --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(0, 0, 0, 0.2);
-  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
-  /*
-  background-image: url(./assets/bg-desktop.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
   background: var(--bg-url) no-repeat top center/ cover;
   /* add adjust height view port */
   height: 100vh;
@@ -40,17 +23,12 @@ body {
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  /*color: #ffffff;*/
 }
 
 #container {
   width: 100%;
-  max-width: 588px;
-  height: 712px;
-  /*border: 1px solid red;*/
-  /*margin-right: auto;
-  margin-left: auto;
-  margin: auto; */
+  max-width: 712px;
+  height: 710px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
@@ -63,60 +41,20 @@ body * {
 
 #profile img {
   width: 112px;
-  border: 1px;
+  height: 112px;
+  border: 2px solid var(--stroke-profile-color);
   border-radius: 100px;
+}
+
+#profile img {
+  /* width: 128px; */
 }
 
 #profile p {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
-}
-
-/* switch */
-
-#switch {
-  /* border: 1px solid red; */
-  position: relative;
-  width: 64px;
-
-  margin: 4px auto;
-}
-
-#switch button {
-  /* display: block; */
-  width: 32px;
-  height: 32px;
-  background: white var(--switch-bg-url) no-repeat center;
-  border: 0;
-  border-radius: 50%;
-
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  transform: translateY(-50%);
-
-  animation: slide-out 0.2s;
-}
-
-.light #switch button {
-  animation: slide-in 0.2s forwards;
-}
-
-#switch button:hover {
-  outline: 8px solid var(--highlight-color);
-}
-
-#switch span {
-  display: block;
-  width: 64px;
-  height: 24px;
-  background: var(--surface-color);
-  border: 1px solid var(--stroke-color);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 9999px;
+  font-size: 18px;
 }
 
 /* list styles */
@@ -180,9 +118,6 @@ ul li a:hover {
   transition: background 0.1s;
   border-radius: 50%;
 }
-#socia-links a:hover {
-  background: var(--highlight-color);
-}
 
 footer {
   text-align: center;
@@ -191,46 +126,8 @@ footer {
 }
 
 /* media queries */
-
-#container {
-  width: 100%;
-  max-width: 960px;
-  height: 712px;
-  margin-top: 64px;
-}
-
-#profile img {
-  width: 128px;
-}
-
-#profile p {
-  font-size: 18px;
-}
-
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
-  }
-
-  .light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-  }
-}
-
-@keyframes slide-in {
-  from {
-    left: 0;
-  }
-  to {
-    left: 50%;
-  }
-}
-
-@keyframes slide-out {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 0;
+    --bg-url: url(./assets/habit/Dark-mode-desktop.png);
   }
 }
