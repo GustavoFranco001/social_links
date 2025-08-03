@@ -12,6 +12,7 @@
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(255, 255, 255, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
+  --wp-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -46,9 +47,9 @@ body * {
   border-radius: 100px;
 }
 
-#profile img {
-  /* width: 128px; */
-}
+/* #profile img {
+  width: 128px;
+} */
 
 #profile p {
   font-weight: 500;
@@ -128,6 +129,39 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/habit/Dark-mode-mobile.png);
+    --bg-url: url(./assets/habit/Dark-mode.png);
   }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.img-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  /* box-shadow: 2px 2px 3px #065812; */
+  /* border: 2px solid var(--wp-bg-color); */
+  /* background-color: #065812; */
+  filter: drop-shadow(2px 2px 5px #065812);
+}
+
+.img-wrapper img {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  right: 1px;
+  bottom: 6px;
+  /* box-shadow: 2px 2px 3px #065812; */
+  /* filter: drop-shadow(2px 2px 5px #065812); */
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.3);
+  transition: transform 0.2s ease-in-out;
 }
